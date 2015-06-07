@@ -12,7 +12,12 @@ class MessagesController < ApplicationController
     sms = @client.account.messages.create(:body => "Your discount code is EASYSALE",
         :to => params[:message][:number],
         :from => "+15005550006")
-    # puts sms.from
+    puts sms
+  rescue => e
+    render plain: e
+    # raise e
+      # logger.debug "here it is:#{e}"
     # render plain: sms.inspect
+
   end
 end

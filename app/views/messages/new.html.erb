@@ -1,0 +1,28 @@
+<div class="heading">
+  <img src="http://coolspotters.com/files/photos/323634/zara-profile.jpg?1357481236">
+  <h4>Fill in this form to get a Zara discount code sent to your phone.</h4>
+</div>
+
+<%= form_for :message, url:messages_path do |f| %>
+  <fieldset>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </p>
+
+    <p>
+      <%= f.label :phone_number %><br>
+      <%= f.text_field :number %>
+    </p>
+
+
+    <div class="button">
+      <%= f.submit "Get Discount!" %>
+    </div>
+  </fieldset>
+<% end %>
